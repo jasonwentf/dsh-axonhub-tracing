@@ -1,0 +1,59 @@
+{
+  "name": "dsh-axonhub-tracing",
+  "version": "0.2.0",
+  "description": "DeepSeek Harness plugin that tags outbound LLM requests with AxonHub tracing headers, with per-provider opt-in and separate branches for subagents, titles, reviews and compaction.",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "axonhub",
+    "tracing",
+    "headers"
+  ],
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "src",
+    "cordis.patch.yml",
+    "README.md",
+    "README.en.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    }
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "dsh": ">=0.2.0-rc.1"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "license": "MIT",
+  "author": "JasonWen",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasonwentf/dsh-axonhub-tracing.git"
+  },
+  "homepage": "https://github.com/jasonwentf/dsh-axonhub-tracing#readme",
+  "bugs": {
+    "url": "https://github.com/jasonwentf/dsh-axonhub-tracing/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
